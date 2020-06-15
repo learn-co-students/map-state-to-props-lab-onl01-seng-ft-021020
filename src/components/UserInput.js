@@ -17,6 +17,10 @@ class UserInput extends Component {
   handleOnSubmit = (event) => {
     event.preventDefault();
     this.props.dispatch({type: 'ADD_USER', user: this.state})
+    this.setState({
+      username: "",
+      hometown: "",
+    });
   }
 
   render() {
@@ -28,6 +32,7 @@ class UserInput extends Component {
             id="username"
             onChange={this.handleInputChange}
             placeholder="username"
+            value={this.state.username}
           />
         </p>
         <p>
@@ -36,6 +41,7 @@ class UserInput extends Component {
             id="hometown"
             onChange={this.handleInputChange}
             placeholder="hometown"
+            value={this.state.hometown}
           />
         </p>
         <input type="submit" />
