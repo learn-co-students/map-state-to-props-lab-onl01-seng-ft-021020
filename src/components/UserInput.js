@@ -16,6 +16,7 @@ class UserInput extends Component {
 
   handleOnSubmit = (event) => {
     event.preventDefault();
+    // console.log("submit",this.props)
     this.props.dispatch({type: 'ADD_USER', user: this.state})
   }
 
